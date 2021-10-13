@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700;900&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+ul,li,a,div,span,textarea,button{
+	box-sizing: border-box;
+}
+ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+div, p, form, input, a, span, button {
+  box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0em;
+}
+
+
+a, a:hover, a:active {
+  text-decoration: none;
+}
+
+a, button, input {
+  transition: all 0.5s ease;
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active
+
+ {
+  outline: none;
+}
+
+.container{
+	width: 1170px;
+}
+
+body{
+	font-family: 'Titillium Web', sans-serif;
+	background-color: #33373c;
+}
+
+/*---*/
+.header{
+	background-color: #33373c;
+	width: 100%;
+	min-height: 100vh;
+}
+.topNav{
+	padding: 20px 0 0 0;
+}
+.link{
+	display: flex;
+	flex-direction: column;
+
+}
+.mainLink{
+	color: #fff;
+	display: flex;
+	perspective: 200px;
+}
+.mainLink:hover{
+	color: #fff;
+}
+.fa-laptop-code{
+	font-size: 35px;
+	transform: rotateY(-20deg);
+
+}
+.name{
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	margin-left: 5px;
+	margin-top: -3px;
+	transform: rotateY(15deg);
+}
+
+.name_span{
+	
+	margin-top: -5px;
+}
+.span-red{
+	color: #dc3545;
+}
+.signature{
+	display: flex;
+	perspective: 200px;
+	color: #dc3545;
+	font-weight: bold;
+	font-size: 13px;
+	margin-left: 10px;
+	text-shadow: 0px 0px 8px transparent;
+}
+.transparent{
+	color: transparent;
+}
+
+.oclock{
+	font-weight: bold;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+}
+.btnMenu{
+	display: flex;
+	justify-content: center;
+}
+.oclock__text{
+	margin-right: 10px;
+}
+.hours , .dot{
+	margin-right: 5px;
+}
+.fa-cloud-moon{
+	color: #82c91e;
+	font-size: 20px;
+	margin-top: -17px;
+	margin-left: -35px;
+}
+.oclock{
+	margin-top: 5px;
+}
