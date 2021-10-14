@@ -34,7 +34,7 @@ window.onload = function () {
 
 		function signatureBorderActive() {
 			const divSignature = document.querySelector('.signature')
-			divSignature.style.textShadow = '0px 0px 2px #dc3545'
+			
 			borderSignature = true;
 			let borderActive = setInterval(() => {
 				signatureBorder.classList.toggle('transparent')
