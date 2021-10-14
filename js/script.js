@@ -68,7 +68,7 @@ window.onload = function () {
 			spanDot.classList.toggle('transparent')
 		}, 700)
 
-		if(hour>7){
+		if(hour>7&& hour<19){
 			oclockMoon.style.display = 'none';
 			oclockSun.style.display = 'block';
 
