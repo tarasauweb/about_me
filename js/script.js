@@ -1,5 +1,15 @@
 window.onload = function () {
-
+	function tranparentDotClock(){
+		const spanDot = document.querySelector('.dot');
+		let dotTimer = setInterval(() => {
+			spanDot.classList.toggle('transparent')
+		}, 700)
+	}
+	let updateTimeIfFocusFalse = setInterval(function () {
+		if(!document.hasFocus()){
+			setTime()
+		}
+	},180000)
 	function writeTextLogo() {
 		const signatureInnerText = document.querySelector('.signature__innerText');
 		const divLink = document.querySelector('.link');
@@ -42,32 +52,17 @@ window.onload = function () {
 
 		}
 	};
-
 	function setTime() {
 		const hour = new Date().getHours();
 		const minutes = new Date().getMinutes();
 		let seconds = new Date().getSeconds();
 		// ----------------------------------------------------------------
 		const spanHour = document.querySelector('.hours');
-		const spanDot = document.querySelector('.dot');
 		const spanMinutes = document.querySelector('.minutes');
 		const oclockMoon = document.querySelector('.fa-cloud-moon');
 		const oclockSun = document.querySelector('.fa-cloud-sun');
-
 		spanHour.innerHTML = hour;
-		// if(minutes<10){
-		// 	spanMinutes.innerHTML = `0${minutes }`;
-		// }
-		// else{
-		// 	spanMinutes.innerHTML = minutes;
-		// }
 		minutes < 10 ? spanMinutes.innerHTML = `0${minutes }` : spanMinutes.innerHTML = minutes;
-		console.log(seconds)
-
-		let dotTimer = setInterval(() => {
-			spanDot.classList.toggle('transparent')
-		}, 700)
-
 		if(hour>7&& hour<19){
 			oclockMoon.style.display = 'none';
 			oclockSun.style.display = 'block';
@@ -77,7 +72,6 @@ window.onload = function () {
 			oclockMoon.style.display = 'block';
 			oclockSun.style.display = 'none';
 		}
-
 		let time = setInterval(() => {
 			++seconds
 			if(seconds>=60){
@@ -85,7 +79,6 @@ window.onload = function () {
 				minutes < 10 ? spanMinutes.innerHTML = `0${minutes+1 }` : spanMinutes.innerHTML = minutes+1;
 			}
 		},1000)
-		
 	}
 	function writeDate(){
 		const date = document.querySelector('.date')
@@ -119,10 +112,8 @@ window.onload = function () {
 		const monthNow = objMonth[monthNumber]
 		const dayNow = objDays[dayNumber]
 		date.innerHTML = monthNow + ' ' + dayNow + ' ' + dateNow + ' ' + year
-		console.log(dateNow)
 	}
-
-
+	tranparentDotClock()
 	writeDate()
 	setTime()
 	writeTextLogo()
